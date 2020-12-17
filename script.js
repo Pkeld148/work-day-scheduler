@@ -2,9 +2,8 @@ var dayHours = ["10", "11", "12", "13", "14", "15", "16", "17"];
 
 var buttonEl = $(".saveBtn");
 var notesArea = $(".notes");
+var currentDay = $("#currentDay");
 
-var notesObject = {};
-var notesArray = [];
 
 // CREATING ROW ELEMENTS
 for (i = 0; i < dayHours.length; i++) {
@@ -25,11 +24,13 @@ for (i = 0; i < dayHours.length; i++) {
   row.append(button);
   $(".container").append(row);
 }
+console.log(moment().format('MMMM Do YYYY, h:mm:ss a'));
+currentDay.text(moment().format('MMMM Do YYYY, h:mm:ss a'));
 
 $(document).ready(function () {
   $(".saveBtn").on("click", function () {
     console.log("YOU CLICKED A SAVE BUTTON");
-    
+
  $(".description").text("THIS FUCKING SUCKS");
 
 
