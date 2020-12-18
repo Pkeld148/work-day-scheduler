@@ -49,12 +49,8 @@ $(document).ready(function () {
 
   $(".saveBtn").on("click", function () {
     var buttonIndex = $(this).attr("data-button");
-
     var textNotes = [];
     textNotes = $("textarea").val();
-    console.log(textNotes);
-    console.log(buttonIndex);
-
     localStorage.setItem(buttonIndex, JSON.stringify(textNotes));
   });
 });
